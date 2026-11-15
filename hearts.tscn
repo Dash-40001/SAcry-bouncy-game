@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cgscr00lxwhsd"]
+
+[ext_resource type="Texture2D" uid="uid://drawtt0r4kt2k" path="res://assets/sprites/pixil-frame-0 (14).png" id="1_qbydv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ffj4"]
+atlas = ExtResource("1_qbydv")
+region = Rect2(0, 32, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhvj2"]
+atlas = ExtResource("1_qbydv")
+region = Rect2(0, 16, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67sc3"]
+atlas = ExtResource("1_qbydv")
+region = Rect2(0, 0, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3gic"]
+atlas = ExtResource("1_qbydv")
+region = Rect2(0, 48, 64, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lnffu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ffj4")
+}],
+"loop": 1,
+"name": &"1_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhvj2")
+}],
+"loop": 1,
+"name": &"2_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67sc3")
+}],
+"loop": 1,
+"name": &"full",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3gic")
+}],
+"loop": 1,
+"name": &"zero",
+"speed": 5.0
+}]
+
+[node name="Hearts" type="Node2D" unique_id=736198028]
+metadata/_edit_vertical_guides_ = [-72.897705]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1350369892]
+position = Vector2(10.14856, 0.3287239)
+sprite_frames = SubResource("SpriteFrames_lnffu")
+animation = &"full"
+autoplay = "full"

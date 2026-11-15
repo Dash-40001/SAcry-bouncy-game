@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bnrqbdg0gk4lh"]
+
+[ext_resource type="Texture2D" uid="uid://cf5cwyf8d13mw" path="res://assets/pixil-frame-0 (16).png" id="1_ck06h"]
+[ext_resource type="FontFile" uid="uid://dq4k6htmlo51n" path="res://assets/fonts/PixelOperator8.ttf" id="2_hyqid"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyqid"]
+atlas = ExtResource("1_ck06h")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdavg"]
+atlas = ExtResource("1_ck06h")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lnffu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hyqid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdavg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="Talkable npc" type="Node2D" unique_id=1010290984]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=979740712]
+sprite_frames = SubResource("SpriteFrames_lnffu")
+frame_progress = 0.5371623
+
+[node name="Label" type="Label" parent="AnimatedSprite2D" unique_id=158818251]
+anchors_preset = -1
+anchor_left = -0.18300001
+anchor_right = -0.18300001
+offset_left = -79.37712
+offset_top = -32.828625
+offset_right = 147.62288
+offset_bottom = -5.8286247
+theme_override_fonts/font = ExtResource("2_hyqid")
+theme_override_font_sizes/font_size = 8
+text = "Hello there child how are you.
+make sure to be Careful"

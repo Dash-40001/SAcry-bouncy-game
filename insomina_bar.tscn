@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bqbusx25ceeb4"]
+
+[node name="insomina bar" type="ProgressBar" unique_id=114324273]
+offset_right = 4.0
+offset_bottom = 27.0
